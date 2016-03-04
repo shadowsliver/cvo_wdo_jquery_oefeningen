@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3divs-events</title>
+    <style>
+        #test{
+            overflow: auto;
+            max-height: 200px;
+            width: 300px;
+        }
+
+        .kader{
+            border: 9px solid red;
+        };
+    </style>
+</head>
+<body>
+<form>
+    <label>Voornaam</label>
+    <p><input type="text"></p>
+    <label>Achternaam</label>
+    <p><input type="text"></p>
+</form>
+
+<div id="test"></div>
+
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+<script>
+    $(document).ready(function(){
+        var $text = "";
+        $(document).on( "keydown", function( event ) {
+            $( "#log" ).html( event.type + ": " +  event.which );
+            switch (event.which) {
+                case 37:
+                    $text = $text + "links <br>";
+                    break;
+                case 38:
+                    $text = $text + "omhoog <br>";
+                    break;
+                case 39:
+                    $text = $text + "rechts <br>";
+                    break;
+                case 40:
+                    $text = $text + "omlaag <br>";
+                    break;
+            }
+            $('div#test').html($text);
+        });
+
+        $('input').focus(function(){
+            $(this).addClass("kader");
+
+        }).blur(function(){
+            $(this).removeClass("kader");
+        })
+
+
+    });
+</script>
+</body>
+</html>

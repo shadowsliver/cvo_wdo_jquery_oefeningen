@@ -1,0 +1,98 @@
+body {
+  background-color: #b4b4b4;
+  color: #787878;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.5;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+section.parallax {
+  height: 700px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;   background-size: cover;
+}
+
+section.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 700px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+section.parallax-1 {
+  /*achtergrond voor de eerste section*/
+  background-image: url("../img/GothamCity.jpg");
+}
+
+.container {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+section.content {
+  padding: 40px 0;
+}
+
+section h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+
+section p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+section.parallax-2 {
+  background-image: url("../img/batman_car.jpg");
+}
+section.parallax-3 {
+  background-image: url("../img/batman.jpg");
+}
+section:last-child {
+  margin-bottom: 0;
+}
+@media all and (min-width: 400px) {
+  section.parallax h1 {
+    font-size: 60px;
+  }
+}
+
+
+@media all and (min-width: 660px) {
+  section p {
+    font-size: 20px;
+  }
+  section.parallax h1 {
+    font-size: 96px;
+  }
+}
+
+
+@media all and (min-width: 1060px) {
+  section.parallax h1 {
+    font-size: 160px;
+  }
+  .container {
+    max-width:  900px;
+  }
+}
+
+
+
+
+
+

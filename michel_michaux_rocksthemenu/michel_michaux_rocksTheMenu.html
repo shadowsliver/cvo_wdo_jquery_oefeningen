@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <!--link rel="stylesheet" href=""-->
+    <!--script src=""></script-->
+    <style>
+        .container {
+            display: none;
+        }
+
+        div#menu {
+            width: 150px;
+            left: -180px;
+            position: absolute;
+            z-index: 100;
+        }
+
+        div#menu ul li {
+            margin-bottom: 1px;
+            position: relative;
+            float: left;
+        }
+
+        div#menu ul li a {
+            width: 150px;
+            height: 22px;
+            background-color: #00293E;
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            padding: 7px 10px 0 0;
+            text-align: right;
+            font-weight: bold;
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        div#menu ul li a.activated {
+            color: red;
+        }
+
+        div#menu ul li a:hover {
+            background-color: #afcb7d;
+        }
+
+        #inhoud {
+            left: 50px;
+            position: absolute;
+            width: 500px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div id="menu">
+        <ul>
+            <li><a href="#" class="activated">Menu 1</a></li>
+            <li><a href="#" class="disactivated">Menu 2</a></li>
+            <li><a href="#" class="disactivated">Menu 3</a></li>
+            <li><a href="#" class="disactivated">Menu 4</a></li>
+            <li><a href="#" class="disactivated">Menu 5</a></li>
+            <li><a href="#" class="disactivated">Menu 6</a></li>
+        </ul>
+    </div>
+
+    <div id="inhoud">
+
+
+        <div class="remove" id="inhoud1">
+            <h1>Inhoud 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores, corporis cupiditate deleniti
+                dignissimos, esse eum fugiat, illum inventore magni molestiae molestias neque omnis placeat praesentium
+                quam quibusdam quo repellat rerum voluptates. Accusamus aliquid atque cupiditate deserunt dolor ea eum,
+                expedita laudantium odit qui quod rerum sapiente, sequi ullam vel?</p>
+        </div>
+        <div class="remove" id="inhoud2">
+            <h1>Inhoud 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores, corporis cupiditate deleniti
+                dignissimos, esse eum fugiat, illum inventore magni molestiae molestias neque omnis placeat praesentium
+                quam quibusdam quo repellat rerum voluptates. Accusamus aliquid atque cupiditate deserunt dolor ea eum,
+                expedita laudantium odit qui quod rerum sapiente, sequi ullam vel?</p>
+        </div>
+        <div class="remove" id="inhoud3">
+            <h1>Inhoud 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores, corporis cupiditate deleniti
+                dignissimos, esse eum fugiat, illum inventore magni molestiae molestias neque omnis placeat praesentium
+                quam quibusdam quo repellat rerum voluptates. Accusamus aliquid atque cupiditate deserunt dolor ea eum,
+                expedita laudantium odit qui quod rerum sapiente, sequi ullam vel?</p>
+        </div>
+        <div class="remove" id="inhoud4">
+            <h1>Inhoud 4</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores, corporis cupiditate deleniti
+                dignissimos, esse eum fugiat, illum inventore magni molestiae molestias neque omnis placeat praesentium
+                quam quibusdam quo repellat rerum voluptates. Accusamus aliquid atque cupiditate deserunt dolor ea eum,
+                expedita laudantium odit qui quod rerum sapiente, sequi ullam vel?</p>
+        </div>
+        <div class="remove" id="inhoud5">
+            <h1>Inhoud 5</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores, corporis cupiditate deleniti
+                dignissimos, esse eum fugiat, illum inventore magni molestiae molestias neque omnis placeat praesentium
+                quam quibusdam quo repellat rerum voluptates. Accusamus aliquid atque cupiditate deserunt dolor ea eum,
+                expedita laudantium odit qui quod rerum sapiente, sequi ullam vel?</p>
+        </div>
+        <div class="remove" id="inhoud6">
+            <h1>Inhoud 6</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores, corporis cupiditate deleniti
+                dignissimos, esse eum fugiat, illum inventore magni molestiae molestias neque omnis placeat praesentium
+                quam quibusdam quo repellat rerum voluptates. Accusamus aliquid atque cupiditate deserunt dolor ea eum,
+                expedita laudantium odit qui quod rerum sapiente, sequi ullam vel?</p>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+<script>
+    $(document).ready(function () {
+
+        $("div.container").fadeIn(2500);
+        $('div#inhoud div:first').siblings().slideUp();
+
+        $('li a').on('click', function () {
+            $('div#inhoud div').eq($('li a').index(this)).slideDown().siblings(this).slideUp();
+        });
+
+        $('li').mouseover(function () {
+            $(this).animate({
+                left: 140
+            }, 500, function () {
+        });
+        });
+        $('li').mouseleave(function () {
+            $(this).animate({
+                left: 0
+            }, 500, function () {
+            });
+        });
+        $('li a').on('click', function () {
+            $('a').removeClass("activated disactivated");
+            $(this).addClass("activated");
+            $(this).siblings.addClass("disactivated");
+        });
+    });
+</script>
+</body>
+</html>

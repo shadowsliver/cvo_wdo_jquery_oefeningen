@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!--link rel="stylesheet" href=""-->
+    <!--script src=""></script-->
+    <style>
+    
+    </style>
+
+  </head>
+  <body>
+
+  <a href="http://www.google.be">Dit gaat weg</a>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+    <script>
+        var oudeTekst = $('a').html();
+        //$('a').attr('href', 'http//www.cvodeverdieping.be');
+        //$('a').html('Google');
+        //$('a').attr('target', '_blank');
+
+        $('a').attr({
+            href: "http://www.cvodeverdieping.be" ,
+            target: "_blank"
+        });
+
+        $('a').html(oudeTekst + 'Google');
+
+
+
+    </script>
+  </body>
+</html>

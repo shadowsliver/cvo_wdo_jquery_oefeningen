@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Flexslider</title>
+  <link rel="stylesheet" href="flexslider.css" type="text/css">
+  <style>
+  .flexslider{
+    width:600px;
+    height:200px;
+  }
+  </style>
+
+</head>
+<body>
+ <div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="./beach/beach1.jpg" />
+    </li>
+    <li>
+      <img src="./beach/beach2.jpg" />
+    </li>
+    <li>
+      <img src="./beach/beach3.jpg" />
+    </li>
+    <li>
+      <img src="./beach/beach4.jpg" />
+    </li>
+  </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery-1.8.2.min.js"><\/script>')</script>
+<script src="jquery.flexslider-min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $('.flexslider').flexslider({
+    itemWidth: 600,
+    animation: "slide",
+    slideshowSpeed: 2500,
+    pauseOnAction: true,            
+    pauseOnHover: true,
+    useCSS: true,                   
+    touch: true,
+    directionNav: true 
+  });
+  
+});
+</script>
+</body>
+</html>

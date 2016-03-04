@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3divs-events</title>
+    <style>
+        div{
+            margin:10px;
+            padding:12px;
+            border:2px solid #666;
+            width:60px;
+        }
+        #one{}
+        #two{}
+        #three{}
+    </style>
+</head>
+<body>
+<div id="one">Blauw</div>
+<div id="two">Groen</div>
+<div id="three">Rood</div>
+Zorg ervoor dat wanneer op een div geklikt wordt, de event object eigenschappen "type", "target" en "target.innerHTML" in de console afgedrukt worden.
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+<script>
+    $(document).ready(function(){
+        jQuery("div", this).hover(
+                function() {
+                    $(this).css('width', '100px');
+                }, function() {
+                    $(this).css('width', '60px');
+                }
+        );
+
+        jQuery("div", this).click(function(event){
+            getinfo(event);
+        });
+
+        function getinfo(dom) {
+            console.log("target = " + dom.type);
+            console.log("target = " + dom.target.nodeName);
+            console.log("target = " + dom.target.attr('id'));
+        };
+
+
+    });
+</script>
+</body>
+</html>
+
+
+dom.attr('id')

@@ -1,0 +1,23 @@
+[
+{
+	"company" : "Ford",
+	"product" : "Dearborne Deuce",
+	"color"   : "Red",
+	"extra"   : "none",
+    "img"     : "Ford_Dearborne_Duece.jpg"
+},
+{
+	"company" : "Porshe",
+	"product" : "911 coupe",
+	"color"   : "Silver",
+	"extra"   : "all wheel drive",
+    "img"     : "porshe-911.jpg"
+},
+{
+	"company" : "Chevrolet",
+	"product" : "Corvette",
+	"color"   : "Red",
+	"extra"   : "automatic",
+    "img"     : "chevrolet-corvette.jpg"
+}
+]

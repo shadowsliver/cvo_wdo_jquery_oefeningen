@@ -1,0 +1,72 @@
+<!DOCTYPE html >
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>jQuery sign-in, sign-up</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8" />
+</head>
+
+<body>
+
+	<ul>
+		<li><a href="#sign_in">Sign In</a></li>
+		<li><a href="#sign_up">Sign Up</a></li>
+	</ul>
+	
+	<div id="sign_in" class="forms">
+		<h2>Sign In</h2>
+		<form action="/sign_in" method="post">
+			<p>
+				<label for="sign_in_username">Username</label>
+				<input type="text" name="sign_in_username" id="sign_in_username" />
+			</p>
+			<p>
+				<label for="sign_in_password">Password</label>
+				<input type="password" name="sign_in_password" id="sign_in_password" />
+			</p>
+			<p>
+				<input type="submit" value="Sign In" />
+			</p>
+		</form>
+	</div>
+	
+	<div id="sign_up" class="forms">
+		<h2>Sign Up</h2>
+		<form action="/sign_up" method="post">
+			<p>
+				<label for="sign_up_username">Username</label>
+				<input type="text" name="sign_up_username" id="sign_up_username" />
+			</p>
+			<p>
+				<label for="sign_up_password">Password</label>
+				<input type="password" name="sign_up_password" id="sign_up_password" />
+			</p>
+			<p>
+				<label for="sign_up_confirmation">Confirm Password</label>
+				<input type="password" name="sign_up_confirmation" id="sign_up_confirmation" /> 
+			</p>
+			<p>
+				<input type="submit" value="Sign Up" />
+			</p>
+		</form>
+	</div>
+
+	<div id="article">
+		<h1>Really Cool Article</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel diam dui. Integer in magna consectetur quam ullamcorper molestie. Nam orci tortor, gravida sit amet tempus nec, malesuada eu est. Duis et vulputate ligula. Nulla a facilisis lorem. Phasellus ac arcu sagittis tellus ornare aliquam sit amet sed turpis. Nullam tristique risus a mauris venenatis euismod. Aliquam in metus nec diam volutpat laoreet. Suspendisse faucibus commodo nulla nec pharetra. Pellentesque dapibus lorem quis sapien pretium nec pretium odio hendrerit. Cras nec ante purus. Nullam laoreet rutrum lorem et vehicula. Vestibulum ultricies, nulla sit amet consequat viverra, neque magna fermentum orci, id feugiat urna nisl ut orci. Donec imperdiet mi faucibus felis dictum fringilla venenatis augue dignissim. Pellentesque condimentum, mauris ultrices consectetur feugiat, mi arcu ornare sapien, nec egestas nunc metus sit amet tortor. Vestibulum at risus sed elit euismod ultrices ut eu neque. Cras et dolor purus. Aliquam sollicitudin, libero a sollicitudin fringilla, odio sapien iaculis neque, eget dignissim massa urna ornare erat.</p>
+
+		<p>Maecenas facilisis nulla non massa volutpat vel egestas arcu dapibus. Sed ultrices commodo molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempus, arcu vitae lobortis lobortis, augue enim consequat massa, eu facilisis lectus leo eu lacus. In ac elit velit. Nulla diam lectus, feugiat eget porta vel, consectetur iaculis tortor. Nullam pellentesque tristique nibh. Sed ligula diam, pulvinar vitae sollicitudin a, scelerisque malesuada lectus. Aenean quam nisl, pellentesque ut ultrices ac, varius at nibh. Sed vulputate lorem non ligula dignissim eget scelerisque elit lobortis.</p>
+
+		<p>Etiam leo justo, egestas eu dignissim et, dictum ut odio. Duis vitae sapien mauris, sed lobortis elit. Nulla viverra, neque eget pellentesque feugiat, tortor nisi fringilla ligula, a malesuada diam metus non nulla. Proin lobortis massa in turpis euismod a sollicitudin orci posuere. Aliquam facilisis sapien vel justo bibendum a vestibulum nisi eleifend. Ut tincidunt, mauris vel dapibus ullamcorper, turpis nunc tempor sem, ac semper est lectus nec odio. Integer gravida elit ac enim iaculis eget egestas sapien tempor. Curabitur condimentum elementum libero quis vehicula. Quisque gravida scelerisque nunc, vel luctus leo semper in. Pellentesque in ipsum et felis ultrices sodales nec varius quam. Praesent id est quis sapien auctor tempus.</p>
+
+		<p>Ut in augue elit. Donec porttitor cursus sapien, tincidunt ultricies neque imperdiet eget. Cras quis feugiat felis. Ut pretium justo vel nulla dictum varius. Etiam tempus, magna quis adipiscing facilisis, ligula erat consequat tellus, nec porttitor ante tellus non magna. Vivamus ac lacus purus, ut iaculis tellus. Curabitur fermentum rutrum nisl non rhoncus. Donec sed quam vitae risus tincidunt imperdiet non in felis. Duis sed mauris mi, nec convallis orci. Vivamus a eros ligula, vitae porttitor lorem. Aliquam ac ante eget nibh eleifend rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec felis enim, cursus et fermentum in, sollicitudin in eros. Nam nec leo nunc. Nunc eu sapien eros, sed mattis orci. Integer velit nunc, elementum et convallis sed, condimentum id odio. Quisque adipiscing scelerisque arcu, ac egestas orci pretium non. Cras faucibus erat non massa malesuada viverra. Nam id lobortis mauris.</p>
+
+		<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere sapien vel magna malesuada mattis. Nam viverra tellus at risus tempus eleifend. Nulla posuere nibh et turpis volutpat nec fermentum erat imperdiet. Donec arcu lacus, porta at lacinia id, tristique vitae ligula. Donec eget velit enim, ac euismod elit. Curabitur cursus, mauris id lacinia molestie, lectus ipsum faucibus sapien, vel egestas leo nibh vel nunc. Aliquam scelerisque porta ipsum, et sollicitudin metus sollicitudin ac. Ut feugiat gravida mi et aliquet. In hac habitasse platea dictumst. In vulputate gravida urna sit amet consectetur. Nunc molestie ligula et elit adipiscing sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean lobortis justo ac nulla bibendum volutpat. Fusce gravida urna at purus varius pharetra.</p>
+
+	</div>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</body>
+</html>

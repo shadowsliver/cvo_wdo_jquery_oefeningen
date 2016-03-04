@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Accordion</title>
+    <style>
+      .accordion{
+        background-color: #DDD;
+        width:500px;
+        margin: 1em;
+      }
+      .accordion h1 {
+        margin: 0px;
+        padding:.25em;
+        background-color: #CCC;
+        border-top:1px solid #000;
+        border-bottom:1px solid #000;
+      }
+      .accordion div {
+        padding: .5em .25em;
+      }
+ 	  </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <h1>Titel 1</h1>
+      <div style="display:block;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <h1 class="">Titel 2</h1>
+      <div style="display:none;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <h1 class="">Titel 3</h1>
+      <div style="display:none;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+    <script>
+    	$(document).ready(function(){
+
+          $('.accordion h1').on('click', function(){
+            $(this).next().slideDown('fast').siblings('div').slideUp('fast');
+          });
+
+
+  	  });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu with jQuery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+</head>
+<body>
+    <div class="container">
+        <ul id="menu">
+            <li>
+                <a href="#">
+                    <i class="icon_about"></i>
+                    <span class="title">About</span>
+                    <span class="description">Learn about us and our services</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon_work"></i>
+                    <span class="title">Work</span>
+                    <span class="description">See our work and portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon_help"></i>
+                    <span class="title">Help</span>
+                    <span class="description">Talk to our support</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon_search"></i>
+                    <span class="title">Search</span>
+                    <span class="description">Search our website</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var selector, selector2;
+
+            function animeer(selectie, options,speed){
+                selectie.velocity(options, speed);
+                console.log(selectie);
+                console.log(options);
+                console.log(speed);
+            }
+
+            $('li').hover(function(){
+                var options = {};
+                selector = $( this ).find( 'a');
+                selector2 = $( this ).find( 'i');
+
+                options['bottom'] = 0;
+                animeer(selector, options, 300);
+
+                options = {};
+                options['top'] = 0;
+                animeer(selector2, options, 300);
+
+            }, function () {
+                var options = {};
+
+                options['bottom'] = -95;
+                animeer(selector, options, 300);
+
+                options = {};
+                options['top'] = 50;
+                animeer(selector2, options, 300);
+            })
+
+        });
+    </script>
+</body>
+</html>

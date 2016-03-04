@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3divs-events</title>
+    <style>
+        #myDiv{
+            width: 100px;
+            height: 100px;
+            border:1px solid black;
+            background: deeppink;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+<button id="knop">Show/Hide</button>
+<div id="myDiv">
+    Dit is mijn div.
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+<script>
+    $(document).ready(function(){
+        var $div = $('#myDiv');
+        $('#knop').on('click', function(){
+            $div.toggle(600);
+        });
+
+    });
+</script>
+</body>
+</html>

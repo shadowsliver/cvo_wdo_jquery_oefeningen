@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!--link rel="stylesheet" href=""-->
+    <!--script src=""></script-->
+    <style>
+    
+    </style>
+
+  </head>
+  <body>
+
+
+    <button id="googlydoo">Ga naar Google</button>  <button id="fake">Ga niet naar Google</button>
+    <p id="joke"></p>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+    <script>
+        $(document).ready(function(){
+
+            $( 'button#fake' ).hover(
+                    function() {
+                        $('#joke').html('<a href="http://www.google.be/">Ga hier naar google</a>');
+                    }, function() {
+                        $('#joke').html('');
+                    }
+            );
+
+            $('button#googlydoo').click(function(){
+                window.location="http://www.google.be/";
+            });
+
+
+        });
+
+
+
+    </script>
+  </body>
+</html>

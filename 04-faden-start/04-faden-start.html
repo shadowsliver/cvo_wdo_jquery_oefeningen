@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        #kader{
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="kader">
+    <img id="foto" src="logo-jquery.jpg" />
+</div>
+
+<input id="knop" type="button" value="fadeOut" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+<script>
+    $(document).ready(function(){
+        $('#kader').css('width', $('#foto').css('width'));
+        $('#kader').css('height', $('#foto').css('width'));
+
+        $('#knop').on('click', function(){
+
+            $('#kader img').fadeToggle(1000);
+            if($(this).val() == "fadeOut"){
+                $(this).val('fadeIn');
+            }
+            else{
+                $(this).val('fadeOut');
+            }
+        })
+    });
+</script>
+</body>
+</html>

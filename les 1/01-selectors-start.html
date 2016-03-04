@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .blue{
+        color: #00D;
+      }
+      .red{
+        color: #D00;
+      }
+      .green{
+        color: green;
+      }
+      .evenp{
+        font-weight: bold;
+      }
+      .italic {
+          font-style:italic;
+      }
+ 	  </style>
+  </head>
+  <body>
+    <h1>Dit is een h1</h1>
+    <p class="evenp">Lorem ipsum stuff</p>
+    <h1 id="tweedeh1">De tweede h1</h1>
+    <p>Lorem ipsum met een lijst</p>
+    <ul id="unorderedlist">
+      <li>nr.1</li>
+      <li>nr.2</li>
+      <li>nr.3</li>
+    </ul>
+    <h1>Nog maar een h1 dan</h1>
+    <h2 id="eersteh2">Sub title</h2>
+    <h2 id="tweedeh2">returns</h2>
+    <p class="evenp">Dit is de laatste lorem ipsum</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery-1.11.1.min.js"><\/script>')</script>
+    <script>
+    	$(document).ready(function(){
+          $('h1').addClass('blue');
+          $('h1#tweedeh1').addClass('red');
+          $('li:last').addClass('green');
+          $('.evenp').css('border', '1px solid black');
+
+            $('h2').css('font-style','italic');
+            $('h2#eersteh2').css('color','red');
+  	  });
+    </script>
+  </body>
+</html>

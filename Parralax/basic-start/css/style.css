@@ -1,0 +1,28 @@
+#pattern {
+    background: #fff url('../img/pattern.jpg') top left;
+    position: fixed; /*blijft vast staan*/
+    top: 0;
+    width: 100%;
+    height: 3000px; /*stel hoog genoeg in om alle content te tonen*/
+    z-index: 1;
+}
+#content {
+    position: relative; /*om z-index te doen*/
+    width: 960px;
+    margin: 0 auto;
+    z-index: 2; /*boven de pattern*/
+}
+
+h1{
+    color:#000;
+    text-align: center;
+}
+
+#content section {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    height: 200px;
+    margin: 50px 0;
+    opacity: .7;
+    padding: 20px;
+}

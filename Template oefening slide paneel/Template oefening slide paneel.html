@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    body {
+      margin: 0 auto;
+      padding: 0;
+      width: 570px;
+      font: Arial, Helvetica, sans-serif;
+    }
+    a:focus {
+      outline: none;
+    }
+    #paneel {
+      background: #754c24;
+      height: 250px;
+      display: none;
+    }
+    .slider {
+      margin: 0;
+      padding: 0;
+      border-top: solid 4px #422410;
+      background: url(btn-slide.gif) no-repeat center top;
+    }
+    .link-slide {
+      text-align: center;
+      width: 144px;
+      height: 31px;
+      padding: 10px 10px 0 0;
+      margin: 0 auto;
+      display: block;
+      font: bold Arial, Helvetica, sans-serif;
+      color: #fff;
+      text-decoration: none;
+    }
+
+ 	  </style>
+  </head>
+  <body>
+    <div id="paneel" align="center">
+      <img src="logo-jquery.jpg" />
+    </div>
+    <p class="slider"><a href="#" class="link-slide">Slide Paneel</a></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+    <script>
+    	$(document).ready(function(){
+          $('.link-slide').on('click', function(){
+            $('#paneel').slideToggle('slow');
+          });
+
+  	  });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <!--link rel="stylesheet" href=""-->
+    <!--script src=""></script-->
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+<form>
+    <input type="text" name="tb1" id="tb1">
+    <input type="text" name="tb2list" id="tb2list">
+    <input type="text" name="tb3list" id="tb3list">
+    <input type="text" name="tb4" id="tb4">
+</form>
+
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../template/js/jquery-1.11.1.min.js"><\/script>')</script>
+<script>
+    $(document).ready(function () {
+
+        var stdw = 'standaardtekst';
+
+        $( "input[name$='list']" ).val(stdw);
+
+    });
+</script>
+</body>
+</html>

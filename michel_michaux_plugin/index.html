@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Michel Michaux Pokugin</title>
+    <link rel="stylesheet" href="jquery.gridster.min.css">
+    <style>
+        .gridster ul li{
+            background: #aa0033;
+            list-style: none;
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        img{
+            width: 100%;
+        }
+        label{
+            min-width: 120px;
+            display: inline-block;
+        }
+        form{
+            text-align: left;
+        }
+        input[type=submit]{
+            width: 200px;
+            height: 40px;
+            display: block;
+            margin-left: 90px;
+            border-radius: 5px;
+            background: lightgreen;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">Text</li>
+        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">Text</li>
+        <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">Text</li>
+        <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">Text</li>
+
+        <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem doloremque ea eaque error incidunt, itaque iure laborum nulla, officia officiis qui ratione! Aperiam delectus id incidunt perspiciatis reiciendis saepe, soluta.</li>
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="2"><img src="img/4.jpg"> Een foto </li>
+        <li data-row="4" data-col="2" data-sizex="2" data-sizey="1">
+            <form>
+                <label>User:</label> <input type="text"><br>
+                <label>password:</label> <input type="password"><br>
+                <input type="submit" value="Login">
+            </form>
+
+
+        </li>
+
+        <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">Text</li>
+        <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">Text</li>
+        <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">Text</li>
+        <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">Text</li>
+    </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="jquery.gridster.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="jquery-1.12.0.min.js"><\/script>')</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(".gridster ul").gridster({
+            widget_margins: [10, 10],
+            widget_paddings: [5, 5],
+            widget_base_dimensions: [185, 185]
+        });
+
+    });
+</script>
+</body>
+</html>

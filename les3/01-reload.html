@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3divs-events</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<button id="reloadKnop">Reload</button>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+<script>
+    $(document).ready(function(){
+        $('button#reloadKnop').on('click', function(){
+            location.reload(true); //vanuit server
+        });
+
+        $(window).on('beforeunload'), function(){
+          return('Ben je zeker, al jouw ingevulde data wordt dan verloren!');
+        };
+    });
+</script>
+</body>
+</html>
+
+
+dom.attr('id')
